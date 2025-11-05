@@ -69,5 +69,14 @@ namespace GeradorCodigoDeBarras
         {
 
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.P)
+            {
+                Btn_Imprimir.PerformClick();
+                e.Handled = true;
+            }
+        }
     }
 }

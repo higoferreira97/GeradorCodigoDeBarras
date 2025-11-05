@@ -51,10 +51,11 @@
             // 
             // pictCodigoSaida
             // 
-            this.pictCodigoSaida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictCodigoSaida.Location = new System.Drawing.Point(68, 191);
+            this.pictCodigoSaida.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictCodigoSaida.Location = new System.Drawing.Point(99, 196);
             this.pictCodigoSaida.Name = "pictCodigoSaida";
-            this.pictCodigoSaida.Size = new System.Drawing.Size(500, 90);
+            this.pictCodigoSaida.Size = new System.Drawing.Size(406, 73);
+            this.pictCodigoSaida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictCodigoSaida.TabIndex = 1;
             this.pictCodigoSaida.TabStop = false;
             this.pictCodigoSaida.Click += new System.EventHandler(this.pictCodigoSaida_Click);
@@ -123,9 +124,11 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnGerar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnGerar;
             this.ClientSize = new System.Drawing.Size(633, 374);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_Imprimir);
@@ -133,9 +136,13 @@
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.pictCodigoSaida);
             this.Controls.Add(this.pictCodigo);
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictCodigoSaida)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
